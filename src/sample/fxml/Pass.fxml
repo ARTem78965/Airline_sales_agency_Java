@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="996.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Pass">
+    <children>
+        <AnchorPane layoutY="124.0" prefHeight="491.0" prefWidth="996.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <TabPane prefHeight="495.0" prefWidth="997.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Главная страница">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="add_passenger" layoutX="-4.0" layoutY="-1.0" prefHeight="468.0" prefWidth="1003.0">
+                                 <children>
+                                    <TableView fx:id="views_table" layoutX="3.0" layoutY="56.0" prefHeight="337.0" prefWidth="997.0" stylesheets="@style.css">
+                                      <columns>
+                                        <TableColumn fx:id="txt_vilet" prefWidth="124.0" text="Вылет" />
+                                          <TableColumn fx:id="txt_datetime_otprav" prefWidth="177.0" text="Дата и время отправление" />
+                                          <TableColumn fx:id="txt_nazn" prefWidth="121.0" text="Назначение" />
+                                          <TableColumn fx:id="txt_datetime_nazn" prefWidth="177.0" text="Дата и время назначение" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab text="Рейсы">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="add_passager" layoutX="800.0" layoutY="416.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="186.0" style="-fx-background-color: #F39C63; -fx-background-radius: 50;" text="Оформить билет" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <TableView fx:id="reis_table" layoutY="43.0" prefHeight="369.0" prefWidth="997.0" stylesheets="@style.css">
+                                 <columns>
+                                    <TableColumn fx:id="col_nomer_vilet" prefWidth="92.0" text="Номер вылета" />
+                                    <TableColumn fx:id="col_num_reis" prefWidth="163.0" text="Номер рейса" />
+                                    <TableColumn fx:id="col_air_v" prefWidth="221.0" text="Аэропорт вылета" />
+                                    <TableColumn fx:id="col_air_n" prefWidth="208.0" text="Аэропот назначения" />
+                                    <TableColumn fx:id="col_vremya_vilet" prefWidth="122.0" text="Время вылета" />
+                                    <TableColumn fx:id="col_tip_airplace" minWidth="0.0" prefWidth="89.0" text="Тип самолета" />
+                                    <TableColumn fx:id="col_price" prefWidth="83.0" text="Цена" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane layoutX="-4.0" prefHeight="44.0" prefWidth="1003.0" style="-fx-background-color: a9a9a9;">
+                                 <children>
+                                    <TextField fx:id="txt_otprav" layoutX="290.0" layoutY="10.0" promptText="Отпарвление" style="-fx-border-color: silver; -fx-background-radius: 20; -fx-border-radius: 20;" />
+                                    <TextField fx:id="txt_prib" layoutX="492.0" layoutY="10.0" promptText="Назначение" style="-fx-border-color: silver; -fx-background-radius: 20; -fx-border-radius: 20;" />
+                                    <Button fx:id="search" layoutX="754.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color: #F39C63; -fx-background-radius: 20; -fx-border-radius: 20;" text="Поиск" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+        </AnchorPane>
+        <Label layoutX="737.0" layoutY="14.0" prefHeight="63.0" prefWidth="245.0" text="Пассажир" textFill="WHITE">
+            <font>
+                <Font name="Times New Roman" size="56.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
